@@ -1,0 +1,31 @@
+{
+	"name": "gulp-template",
+	"version": "1.0.0",
+	"description": "Gulp project template by Egor Light",
+	"main": "gulpfile.js",
+	"scripts": {
+		"start": "gulp"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/egorlight04/gulp-template.git"
+	},
+	"author": "Egor Light",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/egorlight04/gulp-template/issues"
+	},
+	"homepage": "https://github.com/egorlight04/gulp-template#readme",
+	"devDependencies": {
+		"browser-sync": "^2.27.7",
+		"gulp": "^4.0.2",
+		"gulp-clean": "^0.4.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-imagemin": "^8.0.0",
+		"gulp-less": "^5.0.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-svgo": "^2.2.1",
+		"gulp-ttf2woff": "^1.1.1",
+		"gulp-ttf2woff2": "^4.0.1"
+	}
+}
