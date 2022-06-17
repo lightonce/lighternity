@@ -1,10 +1,6 @@
 const gulp = require('gulp');
 const clean = require('gulp-clean');
 const sync = require('browser-sync');
-const svgo = require('gulp-svgo');
-const woff = require('gulp-ttf2woff');
-const woff2 = require('gulp-ttf2woff2');
-const less = require('gulp-less');
 const concat = require('gulp-concat');
 
 exports.default = gulp.series(cleaner, pages, styles, scripts, images, fonts, watcher);
@@ -17,9 +13,8 @@ function pages() {
 exports.pages = pages;
 
 function styles() {
-    return gulp.src('./source/styles/**/*.less')
-        .pipe(concat('styles.min.less'))
-        .pipe(less())
+    return gulp.src('./source/styles/**/*.css')
+        .pipe(concat('styles.min.css'))
         .pipe(gulp.dest('./build/styles'))
         .pipe(sync.stream())
 }
@@ -34,8 +29,7 @@ function scripts() {
 exports.scripts = scripts;
 
 function images() {
-    return gulp.src('./source/images/*.{png,jpeg,jpg,svg}')
-        .pipe(svgo())
+    return gulp.src('./source/images/**/*.{png,jpeg,jpg,svg}')
         .pipe(gulp.dest('./build/images'))
         .pipe(sync.stream())
 }
@@ -44,12 +38,6 @@ exports.images = images;
 function fonts() {
     return gulp.src('./source/fonts/*.ttf')
         .pipe(gulp.dest('./build/fonts'))
-        .pipe(woff())
-        .pipe(gulp.dest('./build/fonts')),
-
-        gulp.src('./source/fonts/*.ttf')
-            .pipe(woff2())
-            .pipe(gulp.dest('./build/fonts'))
 }
 exports.fonts = fonts;
 
@@ -57,7 +45,7 @@ function watcher() {
     sync.init({
         server: './build',
         online: true,
-        tunnel: 'axiomics',
+        tunnel: 'build',
         notify: false
     })
 
