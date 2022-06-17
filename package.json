@@ -4,7 +4,14 @@
 	"description": "Simple and lightweight frontend-development template.",
 	"main": "gulpfile.js",
 	"scripts": {
-		"start": "gulp"
+		"start": "gulp",
+		"build": "gulp build",
+		"pages": "gulp pages",
+		"styles": "gulp styles",
+		"script": "gulp script",
+		"images": "gulp images",
+		"fonts": "gulp fonts",
+		"watcher": "gulp watcher"
 	},
 	"repository": {
 		"type": "git",

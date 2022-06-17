@@ -4,6 +4,7 @@ const sync = require('browser-sync');
 const concat = require('gulp-concat');
 
 exports.default = gulp.series(cleaner, pages, styles, scripts, images, fonts, watcher);
+exports.build = gulp.series(cleaner, pages, styles, scripts, images, fonts);
 
 function pages() {
     return gulp.src('./source/*.html')
