@@ -1,6 +1,6 @@
 {
 	"name": "lighternity",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Simple and lightweight frontend-development template.",
 	"main": "gulpfile.js",
 	"scripts": {
@@ -15,14 +15,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/egorlight04/gulp-template.git"
+		"url": "git+https://github.com/egorlight04/lighternity.git"
 	},
 	"author": "Egor Light",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/egorlight04/gulp-template/issues"
+		"url": "https://github.com/egorlight04/lighternity/issues"
 	},
-	"homepage": "https://github.com/egorlight04/gulp-template#readme",
+	"homepage": "https://github.com/egorlight04/lighternity#readme",
 	"devDependencies": {
 		"gulp": "4.0.2",
 		"gulp-clean": "0.4.0",
