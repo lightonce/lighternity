@@ -37,7 +37,7 @@ function images() {
 exports.images = images;
 
 function fonts() {
-    return gulp.src('./source/fonts/*.ttf')
+    return gulp.src('./source/fonts/**/*.{woff,woff2,ttf}')
         .pipe(gulp.dest('./build/fonts'))
 }
 exports.fonts = fonts;
@@ -51,7 +51,7 @@ function watcher() {
     })
 
     gulp.watch('./source/*.html', pages)
-    gulp.watch('./source/styles/**/*.less', styles)
+    gulp.watch('./source/styles/**/*.css', styles)
     gulp.watch('./source/scripts/**/*.js', scripts)
     gulp.watch('./source/images/*.{png,jpeg,jpg,svg}', images)
 }
